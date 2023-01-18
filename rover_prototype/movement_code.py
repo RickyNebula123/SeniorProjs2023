@@ -33,8 +33,6 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
 
-
-
 def initialize_robot():
     
     global front_right_motor
