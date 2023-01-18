@@ -112,10 +112,10 @@ def BL_bck():
     GPIO.output(left_motor_dir_pin2B, GPIO.LOW)
 
 def stop_stop():
-    global front_right_motor
-    global front_left_motor
-    global back_right_motor
-    global back_left_motor
+    global front_right_motor, front_left_motor
+    global back_right_motor, back_left_motor
+    #global front_left_motor
+    #global back_left_motor
 
     front_right_motor.stop()
     front_left_motor.stop()
@@ -170,3 +170,7 @@ def turn_right_wheels(speed):
 
     front_right_motor.ChangeDutyCycle(speed)
     back_right_motor.ChangeDutyCycle(speed)
+
+def straighten(speed):
+    turn_right_wheels(speed)
+    turn_right_wheels(speed)
